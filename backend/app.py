@@ -1,9 +1,11 @@
 from flask import Flask, current_app, jsonify, request
+from flask_cors import CORS
 import uuid
 import receipt_processing_module
 
 
 app = Flask(__name__)
+CORS(app)
 
 # Store the dictionary in the application context
 with app.app_context():
@@ -32,7 +34,8 @@ def process_receipt():
     id_data = {
         'id':new_id
     }
-    return jsonify(id_data)
+    print(id_data)
+    return id_data
 
 
 if __name__ == '__main__':

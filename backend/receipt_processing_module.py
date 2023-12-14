@@ -1,9 +1,14 @@
 import math
 from datetime import datetime
+import json
 
 def process_receipt(receipt_data):
     # Perform data processing logic here
     points = 0
+    print(receipt_data)
+    print(type(receipt_data))
+    if type(receipt_data) is str:
+        receipt_data = json.loads(receipt_data)
     retailer_name = receipt_data["retailer"]
     for char in retailer_name:
         if char.isalnum():

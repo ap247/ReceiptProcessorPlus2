@@ -1,6 +1,16 @@
-version: '3'
+
+version: '3.8'
 services:
-  flask-api:
-    build: ./backend  # Path to the Dockerfile for the backend
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    links:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
     ports:
       - "8080:8080"

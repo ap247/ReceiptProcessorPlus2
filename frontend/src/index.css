@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  font-family:'Inter', sans-serif;
+  border-radius: 5px;
+}
+
+body {
+  margin: 60px;
+  padding: 0px;
+  background-color: #F2EFEF;
+  color: #5A6795;
+}
+
+input {
+  border: none;
+
+}
+
+button {
+  border: none;
+  background-color: #E2D6D6;
+  color: #5A6795;
+  font-weight: 600;
+}
+
+
+
